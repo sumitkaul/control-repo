@@ -9,8 +9,6 @@ Table of Contents
     * [If You Have Already Installed PE](#if-you-have-already-installed-pe)
   * [Copy This Repo Into Your Own Git Server](#copy-this-repo-into-your-own-git-server)
     * [Gitlab](#gitlab)
-    * [Stash](#stash)
-    * [Github](#github)
   * [Configure PE to Use the Control\-Repo](#configure-pe-to-use-the-control-repo)
     * [Install PE](#install-pe)
     * [Get the Control\-Repo Deployed On Your Master](#get-the-control-repo-deployed-on-your-master)
@@ -61,14 +59,14 @@ Trusted facts are created at the time a CSR is generated.  So, we need to regene
 
 Follow this document to regenerate the certificate on your master.
 
-http://docs.puppetlabs.com/pe/latest/regenerate_certs_master.html
+[http://docs.puppetlabs.com/pe/latest/regenerate\_certs\_master.html](http://docs.puppetlabs.com/pe/latest/regenerate_certs_master.html)
 
 ##Copy This Repo Into Your Own Git Server
 
 ###Gitlab
 
 1. Install Gitlab
- - https://about.gitlab.com/downloads/
+ - [https://about.gitlab.com/downloads](https://about.gitlab.com/downloads)
 
 2. After Gitlab is installed you may sign if with the `root` user and password `5iveL!fe`
 
@@ -120,13 +118,6 @@ http://docs.puppetlabs.com/pe/latest/regenerate_certs_master.html
 
 17. `git branch --set-upstream-to origin/production`
 
-###Stash
-
-Coming soon!
-
-###Github
-
-Coming soon!
 
 ##Configure PE to Use the Control-Repo
 
