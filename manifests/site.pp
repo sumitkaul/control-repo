@@ -30,9 +30,9 @@ node default {
   #https://docs.puppetlabs.com/puppet/latest/reference/lang_facts_and_builtin_vars.html#trusted-facts
   #https://docs.puppetlabs.com/puppet/latest/reference/ssl_attributes_extensions.html#aws-attributes-and-extensions-population-example
 
-  if !empty( $trusted['extensions']['pp_role'] ) {
-    include "role::${trusted['extensions']['pp_role']}"
-  }
+  # if !empty( $trusted['extensions']['pp_role'] ) {
+  #   include "role::${trusted['extensions']['pp_role']}"
+  # }
 
   # This is where you can declare classes for all nodes.
   # Example:
