@@ -15,6 +15,7 @@ Table of Contents
   * [Test Code Manager](#test-code-manager)
 * [Updating From a Previous Version of PE](#updating-from-a-previous-version-of-pe)
   * [Upgrading to PE2015\.3\.z from PE 2015\.2\.z](#upgrading-to-pe20153z-from-pe-20152z)
+* [VirtualBox/Vagrant](#virtualbox-vagrant)
 
 # Before Starting
 
@@ -107,7 +108,7 @@ If you run into any issues or have more questions about the installer you can se
 
 [http://docs.puppetlabs.com/pe/latest/install_basic.html](http://docs.puppetlabs.com/pe/latest/install_basic.html)
 
-###Configure Code Manager in PE 
+###Configure Code Manager in PE
 
 Summary Steps:
 
@@ -164,3 +165,22 @@ When upgrading the `puppet_enterprise::profile::master` class has the `file_sync
 
 Finally, you’ll need to `echo 'code_manager_mv_old_code=true' > /opt/puppetlabs/facter/facts.d/code_manager_mv_old_code.txt` so that my puppet code will redeploy all of your code with code manager.
 
+# VirtualBox/Vagrant
+
+The repository includes an example Hiera data file that can be use to tune PE for low memory usage when running under VirtualBox.
+
+To use this file, it is necessary to change the Hiera configuration so it uses that hierarchy. The layer needed is `virtual/%{::virtual}`
+
+Example `hiera.yaml`
+
+```yaml
+---
+backends:
+  - yaml
+
+hierarchy:
+  - "nodes/%{::trusted.certname}"
+  - "virtual/%{::virtual}"
+  - common
+
+```
