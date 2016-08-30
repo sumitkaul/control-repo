@@ -2,7 +2,7 @@ LINT_IGNORES = ['rvm']
 
 namespace :lint do 
   desc "Check puppet module code style."
-  task :lint:ci do
+  task :ci do
     begin
       require 'puppet-lint'
     rescue LoadError
