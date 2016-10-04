@@ -3,3 +3,6 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
+env:
+ - PUPPET_VERSION=2.6.14
+ - PUPPET_VERSION=2.7.11
